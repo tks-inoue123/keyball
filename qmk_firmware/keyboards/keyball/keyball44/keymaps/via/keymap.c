@@ -69,3 +69,9 @@ void oledkit_render_info_user(void) {
     keyball_oled_render_layerinfo();
 }
 #endif
+
+void keyboard_post_init_user(void) {
+#ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
+    set_auto_mouse_enable(true);
+#endif
+}
